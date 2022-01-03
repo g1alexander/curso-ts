@@ -1,3 +1,3 @@
-const message: string = "hola mundo";
-
-console.log(message);
+(() => {
+  const a: number = 10;
+})();
