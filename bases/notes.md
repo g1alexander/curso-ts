@@ -53,3 +53,76 @@ En TS existe un tipo de dato el cual es propio de el y el cual no existe en JS, 
 ```ts
 const tuple1: [string, number] = ["Hola", 10];
 ```
+
+### enum
+
+los enum o enumeraciones es una caracteristica propia de TS la cual aparte de funcionar muy bien nos permite tambien manejar los valores enumericos de una manera en la que tengamos control de esto ej:
+
+- queremos tener propiedades min, medium y max, si bien lo podriamos hacer declarando un objecto o variables individuales con **enum** podemos tener estos valores tipo "constante"
+
+los enum funcionando como un incrementador entre propiedad ej:
+
+```ts
+enum AudioLevel {
+  min = 1,
+  medium,
+  max,
+}
+```
+
+- esto quiere decir que la propiedad min empezará en 1 y irá aumentando las demas, medium valdrá 2 y max 3
+
+- para declarar un enum se utiliza UpperCamelCase lo cual quiere decir que empieza con mayuscula
+
+NOTA: Dada la siguiente enumeración, ¿Qué valor tiene "d"?
+
+```ts
+enum enumeracion {
+  a = 10,
+  b,
+  c = 9,
+  d,
+}
+```
+
+Como "c" se iguala a 9, el siguiente valor es 10, no importa que se repita el valor de la enumeración.
+
+NOTA: cuando una variable es de tipo enum se puede reasignar con un valor numerico, si bien esto se puede hacer no es recomendable, debido a que por eso declaramos un enum 😅
+
+### void
+
+los tipos de dato void nos permite decirle a las funciones que no queremos retornar algun valor en especifico, esto nos ayuda principalmente a la lectura del codigo
+
+NOTA: cuando le especificamos que retornamos void TS nos marcará error si intentamos retornar algun valor, si no le decimos que vamos a retornar TS permitirá que retorne cualquier cosa
+
+```ts
+function callBatman(): void {
+  return;
+}
+
+const callSuperman = (): void => {
+  return;
+};
+```
+
+### never
+
+Los tipos de datos **never** son especiales, debido a su retorno es cual es parar la ejecucion del codigo mediante un error (muy util para los helpers)
+
+```ts
+const error = (message: string): never => {
+  throw new Error(message);
+};
+
+error("Auxilio!");
+```
+
+### null y undefined
+
+cuando configuramos el tsconfig.json lo mas escrito posible hace que el null y undefined "desaparezca"
+
+- a traves del **strictNullChecks** podemos configurar si queremos permitir el uso del null y undefined en cierto tipos (no recomendable)
+
+### ejercicio practico 1
+
+### examen teorico 1
