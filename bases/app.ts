@@ -27,6 +27,8 @@
     console.log("Auxilio!!!");
   }
 
+  pedir_ayuda();
+
   // Aserciones de Tipo
   const poder: any = "100";
   const largoDelPoder: number = poder.length;
