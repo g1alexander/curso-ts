@@ -26,8 +26,8 @@
   // const xmen3 = new Xmen("holaaaa3");
   // const xmen4 = new Xmen("holaaaa4");
 
-  console.log(xmen1);
-  console.log(xmen2);
-  console.log(xmen3);
-  console.log(xmen4);
+  // console.log(xmen1);
+  // console.log(xmen2);
+  // console.log(xmen3);
+  // console.log(xmen4);
 })();
