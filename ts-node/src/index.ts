@@ -1,6 +1,11 @@
-import { getPokemon } from "./generics/getPokemon";
+import { Pokemon } from "./decorators/pokemon-class";
 
-getPokemon(1)
-  .then((pokemon) => console.log(pokemon.sprites.front_default))
-  .catch((error) => console.error(error))
-  .finally(() => console.log("hola"));
+const pikachu = new Pokemon("picaku");
+
+// (Pokemon as any).prototype.Otra = "hola"; //no se puede expandir prpiedades gracias al constructor
+
+// pikachu.savePokemonToDB(5000);
+
+pikachu.api = "hol.com";
+
+console.log(pikachu);
